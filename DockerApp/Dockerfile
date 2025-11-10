@@ -14,6 +14,4 @@ RUN make all
 
 EXPOSE 16000
 
-
 CMD ["bin/facebooc"]
-
