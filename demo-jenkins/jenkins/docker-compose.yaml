@@ -4,7 +4,7 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 192.168.61.0/24
+        - subnet: 192.168.62.0/24
 
 volumes:
   jenkins-docker-certs:
@@ -12,7 +12,7 @@ volumes:
 
 services:
   jenkins:
-    image: myjenkins/blueocean:2.387.3
+    image: jenkinsci/blueocean:1.25.7
     build: 
       context: ./
       dockerfile: Dockerfile
@@ -25,7 +25,7 @@ services:
       - DOCKER_TLS_VERIFY=1
     networks:
       custom:
-        ipv4_address: 192.168.61.15
+        ipv4_address: 192.168.62.15
     dns: 8.8.8.8
     domainname: codespaces.io
     hostname: jenkins
@@ -45,7 +45,7 @@ services:
       - DOCKER_TLS_CERTDIR=/certs
     networks:
       custom:
-        ipv4_address: 192.168.61.16
+        ipv4_address: 192.168.62.16
         aliases:
           - docker
     privileged: true

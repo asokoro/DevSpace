@@ -1,4 +1,4 @@
-version: '3.0'
+# version: '3.0'
 
 networks:
   custom:
@@ -68,7 +68,7 @@ services:
       MONGO_INITDB_ROOT_PASSWORD: admin123
 
   jenkins:
-    image: myjenkins/blueocean:2.375.1-1
+    image: jenkinsci/blueocean:1.25.7
     build:
       context: ./
       dockerfile: Dockerfile
