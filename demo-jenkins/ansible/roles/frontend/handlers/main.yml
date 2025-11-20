@@ -1,8 +1,0 @@
----
-# handlers file for frontend
-  - name: restart frontend service
-    supervisorctl:
-      name: frontend
-      state: restarted
-
-  

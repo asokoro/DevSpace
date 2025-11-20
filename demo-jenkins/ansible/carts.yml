@@ -1,6 +1,0 @@
----
-  - hosts: carts
-    become: yes
-    roles:
-      - { role: common }
-      - { role: carts }
